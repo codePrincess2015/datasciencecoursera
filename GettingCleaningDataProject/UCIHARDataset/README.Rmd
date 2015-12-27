@@ -1,0 +1,13 @@
+---
+title: "README"
+output: html_document
+---
+
+For this project, I took the following steps to tidy the data:
+
+1) Combine the training and test data using r bind.
+2) Grep the features the file for the keywords "mean" and "std" to narrow down the data.
+3) Merge the activities table with the the bigger data set using a left outer join.
+4) Convert the Subject and Activity fields to factors in order to group the data properly and summarize it. 
+
+
