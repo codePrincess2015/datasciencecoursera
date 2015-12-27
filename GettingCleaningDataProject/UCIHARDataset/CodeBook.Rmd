@@ -4,6 +4,21 @@ output: html_document
 ---
 
 
-Subject_Number - The subject id number ranging from [1:30] whose data was recorded
-Activity - What activity is being done, listed in activity_labels.txt
-Variables 3-79 - These are variables whose features have mean or standard deviation (std) in its feature name. These features are listed at length in the features.txt file. 
+##The Data
+
+This data set, when the training and testing sets are combined, has 561 variables for over 10,000 observations. We cull this data down to 180 observations for 79 variables, when we take each of the means of all the observations for each column and report this information.
+##Column Names  
+
+Subject_Number - The subject id number ranging from [1:30] whose data was recorded  
+
+Activity - What activity is being done, listed in activity_labels.txt  
+
+Variables in columns 3-79 - These are variables whose features have mean or standard deviation (std) in its feature name. These features are listed at length in the features.txt file.  
+
+##Transformations 
+
+1) I merged the data in activities_labels.txt with the data of training and testing sets using an left outer join so that all rows in the big data set are included and are matched to the labels.  
+
+2) I converted two of the columns, subject and activity, to factors, so that they may be not be included in the summary, but used as a way to filter the data. 
+
+3) I create a summary of the mean of each column. 
